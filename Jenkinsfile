@@ -22,5 +22,12 @@ pipeline {
       }
     }
 
+    stage('Deliver') {
+      steps {
+        sh 'npm start'
+        input 'Finished using the web site? (Select "Proceed" to continue)'
+      }
+    }
+
   }
 }
